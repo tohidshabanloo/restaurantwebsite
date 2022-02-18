@@ -1,20 +1,116 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  font-size: 10px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
 body {
-  background-color: blueviolet;
+  background-image: url("https://jolly-kalam-23776e.netlify.app/restaurantwebsite/assets/images/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background-attachment: fixed;
+  letter-spacing: -1px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
 }
 .header {
-  padding: 70px;
   background-color: none;
 }
 .menu {
+  justify-content: center;
+  width: 2000px%;
+}
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.menu li {
+  background: #ffc600;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.top {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "hero hero cta1" "hero hero cta2";
+}
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white
+    url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: start;
   justify-content: center;
 }
-.menu-list {
-  display: inline-flex;
-  flex-direction: row;
-  background-color: yellow;
-  font-size: 30px;
-  margin: 0px 50px 0px 0px;
-  padding: 0px 40px 0px 40px;
+.hero > * {
+  background: #ffc600;
+  padding: 5px;
+}
+.cta {
+  background: #ffc600;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+.cta p {
+  margin: 0;
+}
+.price {
+  font-size: 60px;
+  font-weight: 300;
+}
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0px;
+  color: white;
+  position: fixed;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+  text-align: center;
+  
+  border-radius: 8px 8px 0px 0px;
+  height: 35px;
+}
+.footer a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(0, 255, 255);rgba(72, 218, 244, 0.797);
 }
