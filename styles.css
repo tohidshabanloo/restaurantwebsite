@@ -1,0 +1,20 @@
+body {
+  background-color: blueviolet;
+}
+.header {
+  padding: 70px;
+  background-color: none;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu-list {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: yellow;
+  font-size: 30px;
+  margin: 0px 50px 0px 0px;
+  padding: 0px 40px 0px 40px;
+}
