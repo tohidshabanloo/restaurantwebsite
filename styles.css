@@ -46,6 +46,11 @@ button {
   border: 0;
   padding: 10px 20px;
 }
+@media (min-width: 1000px) {
+  [aria-controls="menu-list"] {
+    display: none;
+  }
+}
 @media (max-width: 1000px) {
   .menu {
     perspective: 800px;
