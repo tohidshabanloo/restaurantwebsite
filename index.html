@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Restaurant Website!</title>
   </head>
+
   <body>
     <div class="wrapper">
       <nav class="menu">
@@ -33,12 +34,11 @@
           </li>
         </ul>
       </nav>
-
       <div class="top">
-        <div class="hero">
+        <header class="hero">
           <h1>Terry's Taco Joint</h1>
           <p>Pretty Good Tacos!</p>
-        </div>
+        </header>
         <div class="cta cta1">
           <p class="price">$1.99</p>
           <p>Tacos</p>
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="features">
+      <section class="features">
         <div class="feature">
           <span class="icon">🌮</span>
           <h3>Tacos</h3>
@@ -82,7 +82,35 @@
             assumenda.
           </p>
         </div>
-      </div>
+      </section>
+
+      <section class="about">
+        <img
+          src="images/queso-taco.png"
+          alt="Yummy Taco"
+          class="about__mockup"
+        />
+        <div class="about__details">
+          <h2>Featured Taco</h2>
+          <p>Slim Profile, easy to hold and loaded with cheese.</p>
+          <p>This is the one you have been waiting for</p>
+          <button>Learn More →</button>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Instant Grams</h2>
+        <img src="https://source.unsplash.com/random/201x201" alt="" />
+        <img src="https://source.unsplash.com/random/202x202" alt="" />
+        <img src="https://source.unsplash.com/random/203x203" alt="" />
+        <img src="https://source.unsplash.com/random/204x204" alt="" />
+        <img src="https://source.unsplash.com/random/205x205" alt="" />
+        <img src="https://source.unsplash.com/random/206x206" alt="" />
+        <img src="https://source.unsplash.com/random/207x207" alt="" />
+        <img src="https://source.unsplash.com/random/207x208" alt="" />
+        <img src="https://source.unsplash.com/random/207x209" alt="" />
+        <img src="https://source.unsplash.com/random/207x210" alt="" />
+      </section>
     </div>
     <div class="footer">
       <p>
@@ -90,5 +118,19 @@
         <a href="https://www.tohidsh.com" target="_blank">Tohid Shabanloo</a>
       </p>
     </div>
+  </body>
+</html>
+
+    <script>
+      const navButton = document.querySelector("button[aria-expanded]");
+
+      function toggleNav({ target }) {
+        const expanded =
+          target.getAttribute("aria-expanded") === "true" || false;
+        navButton.setAttribute("aria-expanded", !expanded);
+      }
+
+      navButton.addEventListener("click", toggleNav);
+    </script>
   </body>
 </html>
